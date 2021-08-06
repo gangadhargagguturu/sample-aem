@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    
+    <link rel="stylesheet" href="./ArthamaticOperation.css">
+    <script>
+		function ArthamaticOperation(){
+			var val1 = document.getElementById("num1").value;
+			var val2 = document.getElementById("num2").value;
+			var opt = document.getElementById("opt").value;
+
+            switch (opt) {
+                case "Addition":
+                var ans = eval(val1 + "+" + val2);
+                alert(ans);
+		       // document.getElementById("ans").value = ans;
+                    break;
+                case "Subtraction":
+                var ans = eval(val1 + "-" + val2);
+                alert(ans);
+		        //document.getElementById("ans").value = ans;
+                    break;
+                case "Multiplication":
+                var ans = eval(val1 + "*" + val2);
+                alert(ans);
+		        //document.getElementById("ans").value = ans;
+                    break;
+                case "Division":
+                var ans = eval(val1 + "/" + val2);
+                alert(ans);
+		        //document.getElementById("ans").value = ans;
+                    break;
+            
+                default:
+                    break;
+            }
+           /* if(opt="Addition"){
+                var ans = eval(val1 + "+" + val2);
+		        document.getElementById("ans").value = ans; 
+            }
+             if(opt="Subtraction"){
+                var ans = eval(val1 + "-" + val2);
+		        document.getElementById("ans").value = ans;
+            }
+            if(opt="Multiplication"){
+                var ans = eval(val1 + "*" + val2);
+		        document.getElementById("ans").value = ans; 
+            }
+            if(opt="Division"){
+                var ans = eval(val1 + "/" + val2);
+		        document.getElementById("ans").value = ans; 
+            } */
+			
+		//	var ans = eval(val1 + opt + val2);
+		//  document.getElementById("ans").value = ans;
+        	
+        }
+	</script>
+</head>
+
+<body>
+ <div id="center">
+   <label>Enter First Number</label><br>
+   <input type="number" id="num1"  required><br><br>
+   <label>Enter second Number</label><br>
+   <input type="number" id="num2"  required><br><br>
+   <div id="select">
+    <label><b>Select</b></label><br>
+    <select id="opt">
+    <option>Select</option>
+    <option>Addition</option>
+    <option>Subtraction</option>
+    <option>Multiplication</option>
+    <option>Division</option>
+    </select><br><br>
+   </div><br><br>
+ <!--  <label for="desc">Answer</label><br>
+   <input type="text" id="ans" readonly><br><br>-->
+   <button type="submit"  id="button" onClick="ArthamaticOperation()">Calculate</button>
+ </div>
+</body>
+</html>
