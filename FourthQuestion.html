@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>AL</title>
+    <style>
+        div{
+            
+            margin: 1px auto;
+            width: 35%;
+            padding: 10px;
+            font-size: 20px;
+            background-color: white;
+            border: 2px solid blue;
+       
+        }
+        input{
+            width:100%;
+        }
+        
+       #a{
+           width:90%;
+           border: 1px solid yellow;
+           height: 30%;
+           background-color: yellow;
+       }
+       #operation{
+           width: 100%;
+       }
+       button{
+           box-shadow: 2px 2px #888888;
+
+       }
+       
+
+      
+    </style>
+    <script>
+        function myFunction(){
+            var firstnumber = parseInt(document.getElementById("firstnumber").value);
+            var secondnumber = parseInt(document.getElementById("secondnumber").value);
+            var op=document.getElementById("operation").value;
+            if(op == "+") alert(firstnumber + secondnumber);
+            if(op == "-") alert(firstnumber - secondnumber);
+            if(op == "*") alert(firstnumber * secondnumber);
+           
+        }
+           
+      </script>
+</head>
+<body>
+    <div>
+    <label for="firstnumber"> <b>  Enter First Number</b> </label><br>
+    <input type="number" id="firstnumber"><br> 
+    <label for="secondnumber"><b>   Enter Second Number</b> </label><br>
+
+  <input type="number" id="secondnumber"><br>
+ <br><br> 
+ <div id="a" >  Select</b></br>
+<select id="operation">
+<option >select</option>  
+<option value="+">Add</option>
+<option value="-">Minus</option>
+<option value="*">Multipy</option>
+
+    </select></div><br><br><br><br>
+
+    <button onclick="myFunction()">Compute</button>
+</div>
+</body>
+</html>
